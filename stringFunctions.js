@@ -41,3 +41,9 @@ export function createUrlString(str) {
 
     return stringUrl;
 }
+
+// function convert to string with Base
+//base2 = binary, 123 => 1010110
+//base16 = hexadecimal, 123 => 7b
+let randomColor = Math.floor(Math.random() * 15165543);
+let convertedColor = randomColor.toString(16);

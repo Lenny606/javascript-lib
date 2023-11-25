@@ -1,0 +1,61 @@
+<!-- // DOM events - 3 types of DOM events
+
+//inline events (old method ), not SEO friendly
+//hmtl + event + handler (can be without quotes) -->
+<button onclick=clickHandler()> CLICK</button>
+
+<script>
+    function clickHandler() {
+        console.log('boom')
+    }
+</script>
+
+<!-- //inline properties
+//hmtl -> DOM selector + inline event + (anonymous)handler -->
+<button> CLICK</button>
+
+<script>
+    let btn = document.querySelector('button');
+    btn.onclick = () => { console.log('boom') };
+</script>
+
+<!-- //eventListener - newest method/best, has event object (e) with many properties ('target')
+//attaches a method to the DOM element
+//hmtl  -> DOM selector (target) + eventListener (not js, provided by DOM API) + handler -->
+<button> CLICK</button>
+
+<script>
+    let btn = document.querySelector('button');
+    btn.addEventListener("click", clickHandler);
+
+    function clickHandler() {
+        console.log('boom')
+    }
+</script>
+<!-- eventListeners are lazy ... they are not waiting for events, but event triggers listener
+This "listener" is a function that is subscribed to the event, meaning that when the event is actually fired, it will be notified. This listener will then call the event handler to execute. -->
+
+<!-- passing arguments
+// Using arrow syntax to define an anonymous function will work -->
+<!-- btn.addEventListener("click", () => {doSomething(dynamicContent) }) -->
+
+<!-- ----------------------------------------------------- -->
+<p>TEXXXXXXXXXXXXXXXXXXXXXXXXXXT</p>
+
+<button onclick="clickHandlerRed()">RED</button>
+<button onclick="clickHandlerBlue()">BLUE</button>
+
+<script>
+    const text = document.querySelector('p')
+
+    function clickHandlerRed() {
+        text.setAttribute('style', 'color:red');
+
+    };
+
+    function clickHandlerBlue() {
+        text.style.color = "blue";
+    };
+
+
+</script>
