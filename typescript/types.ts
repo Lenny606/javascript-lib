@@ -63,7 +63,11 @@ interface Method{
     print : (value: number) => number
 }
 
+interface ComplexMethod extends Method {
+    complexFunction( value: number) : number;
+}
+
 let objectMethod: Method = {
-    print : (value) => value
+    print: (value) => value
 }
 objectMethod.print(5)
