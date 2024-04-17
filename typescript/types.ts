@@ -33,12 +33,19 @@ function calc(num1: number, num2: number): number {
 }
 
 //alias - custom type, use for DRY, can be exported
-export type User = { id: number, name: string, isActive: boolean }
+export type User = { id: number, name: string, isActive: boolean, printUser():void }
+//adds property
+export type UserAdmin = User & {clearence: number }
+//grouping custom types with Union
+type Users = UserAdmin | User;
 const newUser: User = {
     id: 1,
     name: "jon",
-    isActive: false
+    isActive: false,
+    printUser() {
+    }
 }
+
 function updateUser(user: User): User {
     //logic
     return
@@ -51,3 +58,16 @@ type Theme = "light" | "dark";
 let theme: Theme;
 theme = "dark";
 theme = "light";
+
+interface Method{
+    print : (value: number) => number
+}
+
+interface ComplexMethod extends Method {
+    complexFunction( value: number) : number;
+}
+
+let objectMethod: Method = {
+    print: (value) => value
+}
+objectMethod.print(5)
