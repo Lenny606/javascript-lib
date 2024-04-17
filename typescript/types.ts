@@ -1,4 +1,4 @@
-//objects
+//objects-------------------------------------
 let object: { id: number, title: string, items: string[] } =
     {
         id: 1,
@@ -26,7 +26,7 @@ let itemsObject: { readonly title: string, cost?: number }[] = [
 ]
 itemsObject[0].title = 5  //readonly
 
-//functions
+//functions------------------------------------
 function calc(num1: number, num2: number): number {
 
     return num1 + num2
