@@ -1,4 +1,58 @@
 /**
+ * Sorting Algorithms Summary
+ * 
+ * When to use each algorithm:
+ * 
+ * 1. Insertion Sort:
+ *    - Best for small datasets (n < 50)
+ *    - When data is nearly sorted
+ *    - When stable sorting is needed
+ *    - When memory space is limited
+ *    - Time: O(n²) worst/avg, O(n) best
+ *    - Space: O(1)
+ * 
+ * 2. Bubble Sort:
+ *    - Best for very small datasets (n < 10)
+ *    - When data is nearly sorted
+ *    - When simplicity is more important than performance
+ *    - When stable sorting is needed
+ *    - Time: O(n²) worst/avg, O(n) best
+ *    - Space: O(1)
+ * 
+ * 3. Selection Sort:
+ *    - Best for small datasets
+ *    - When memory writes are expensive
+ *    - When simplicity is more important than performance
+ *    - Time: O(n²) in all cases
+ *    - Space: O(1)
+ * 
+ * 4. Quick Sort:
+ *    - Best for large datasets
+ *    - When average-case performance is important
+ *    - When memory space is limited
+ *    - When stability is not required
+ *    - Time: O(n log n) avg, O(n²) worst
+ *    - Space: O(log n)
+ * 
+ * 5. Merge Sort:
+ *    - Best for large datasets
+ *    - When stable sorting is required
+ *    - When worst-case performance is important
+ *    - When working with linked lists
+ *    - When external sorting is needed
+ *    - Time: O(n log n) in all cases
+ *    - Space: O(n)
+ * 
+ * General Guidelines:
+ * - For small datasets (< 50 elements): Use Insertion Sort
+ * - For medium datasets (50-1000 elements): Use Quick Sort
+ * - For large datasets (> 1000 elements): Use Quick Sort or Merge Sort
+ * - When stability is required: Use Insertion Sort, Bubble Sort, or Merge Sort
+ * - When memory is limited: Use Quick Sort or Insertion Sort
+ * - When worst-case performance is critical: Use Merge Sort
+ */
+
+/**
  * Performs insertion sort on an array of numbers
  * Time Complexity: O(n²)
  * Space Complexity: O(1)
