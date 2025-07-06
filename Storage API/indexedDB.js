@@ -19,6 +19,24 @@ open.onsuccess = () => {
         name: "jon",
         age: 99
     })
+    store.put({
+        id: 2,
+        name: "bill",
+        age: 99
+    })
+
+    store.get(1).onsuccess = (user) => {
+        console.log(user.target.result)
+    }
+    const user = store.get(2)
+    user.onsuccess = () => {
+        console.log(user.result)
+    }
+    store.getAll()
+
+    transaction.oncomplete = () => {
+        db.close()
+    }
 }
 
 open.onerror = () => {
