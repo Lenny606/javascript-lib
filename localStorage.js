@@ -31,5 +31,14 @@ function initTheme(){
     const theme = localStorage.getItem('theme');
     if (theme === 'dark') {
         document.body.classList.add('dark');
+    } else {
+        document.body.classList.remove('dark');
     }
 }
+
+//Storage event for every tabs in browser
+window.addEventListener('storage', (e) => {
+    if (e.key === 'theme') {
+        initTheme();
+    }
+});
