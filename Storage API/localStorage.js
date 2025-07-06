@@ -1,5 +1,5 @@
 //everything is saved as String
-
+//5MB limit
 localStorage.setItem('name', 'zhangsan');
 localStorage.setItem('int', 123);
 localStorage.setItem('arr', [1,2,3,4]); //type modified , use strigify
